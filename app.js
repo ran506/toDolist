@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://ran:050627@ran.agxxa.mongodb.net/todolistDB?retryWrites=true&w=majority", {useNewUrlParser:true});
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser:true});
 const _ = require("lodash");
 const date =  require(__dirname + "/date.js");
 const app = express();
